@@ -4,7 +4,7 @@ import random
 
 button_width = 17
 number_of_characters_per_row = 56
-diff_for_answers = 15
+diff_for_answers = number_of_characters_per_row - 13 # da je prostor še za slikico prav/narobe
 
 import subprocess  # poskusile 5 razlicnih modulov: pyglet, mp3play, sound in se dva pa noben ni delal
 
@@ -14,8 +14,8 @@ def play_button_click():  # dela samo na OS X!
     subprocess.call(["afplay", "Sounds/button_click.mp3"])
     # dela prepočasi!! - ko to dela, ne dela nič drugo!
 
-
-# subprocess.call(["afplay", "music.mp3"]) # ce to igram, potem nic drugo ne dela dokler se glasba ne konca!
+# lahko bi dodali glasbo v ozadju:
+# subprocess.call(["afplay", "music.mp3"]) # vendar ce to igram, potem nic drugo ne dela dokler se glasba ne konca!
 
 import gettext
 
@@ -30,6 +30,7 @@ class Quiz(Tk):
     question_count = 0
     number_of_all_questions = 20  # per subject in SUBJECTdata.txt
     points = 0  # number of points user gets for answering the question correctly
+    translation_language = "SL" # privzet jezik
 
     def __init__(self, *args, **kwargs):
         Tk.__init__(self, *args, **kwargs)
@@ -39,6 +40,7 @@ class Quiz(Tk):
         self.initialize_start_page()
 
         self.set_images()
+        self.create_translation_button()
 
     def initialize_container_frame(self):
         self.container = ttk.Frame(self)  # to je frame, ki nima na sebi nič, na njega zlagama nove
@@ -118,6 +120,16 @@ class Quiz(Tk):
         self.wrong_photo = PhotoImage(file="Images/wrong.gif")
         Label(self, image=self.wrong_photo)
 
+    def create_translation_button(self):
+        self.translation_button = ttk.Button(self, text="EN",
+                                            command=self.change_translation_language,
+                                            width=button_width)
+
+    def change_translation_language(self):
+        self.translation_language = "SL" if self.translation_language == "EN" else "EN"
+
+        # Update button text:
+
 
 class StartPage(ttk.Frame):  # podeduje metode in lastnosti razreda
     def __init__(self, parent, quiz_reference):  # self je container - vse se bo nalagalo na container
@@ -127,6 +139,8 @@ class StartPage(ttk.Frame):  # podeduje metode in lastnosti razreda
         self.show_frame()
 
     def show_frame(self):
+        translation_button = self.quiz_reference.translation_lanquage
+
         text = _('''Pozdravljen bodoči maturant!\nPred tabo je kratek kviz iz maturitetnih predmetov\n''')
         ttk.Label(self, text=text, justify="center").pack(padx=10)
 
@@ -150,6 +164,7 @@ class StartPage(ttk.Frame):  # podeduje metode in lastnosti razreda
 
         self.start_page_image = photo  # treba je imeti se eno povezavo, zato da je avtomatsko ne izbrise
         label.pack()
+
 
 #class HowManyQuestionsPage(ttk.Frame):  # vprasa uporabnika na koliko vprašanj želi odgovoriti
 #    def __init__(self, parent, quiz_reference):  # self je container - vse se bo nalagalo na container
@@ -179,13 +194,12 @@ class Question(ttk.Frame):
 
     def show_the_question(self):
         '''prikaze vprasanje na label widgetu'''
-        edited_text = self.check_if_text_too_long(self.question, number_of_characters_per_row)
+        ttk.Label(self, text=_(self.question)).pack(pady=15, padx=10, side="top")
 
-        ttk.Label(self, text=_(edited_text)).pack(pady=15, padx=10, side="top")
-
-    def check_if_text_too_long(self, unedited_text, allowed_number_of_chars):
+    def check_if_text_too_long(self, unedited_text, allowed_number_of_chars=number_of_characters_per_row):
         '''vrne primerno preurejen text z novimi vrsticami, ce je trenutno predolg'''
-        if len(unedited_text) <= number_of_characters_per_row: return unedited_text  # je ze ok
+        unedited_text = _(unedited_text) # translate the text
+        if len(unedited_text) <= allowed_number_of_chars: return unedited_text  # je ze ok
 
         text = ''''''  # vecvrsticni string
         num_of_chars = 0  # in current row
@@ -203,13 +217,12 @@ class Question(ttk.Frame):
         self.radio_buttons = {}
         self.var = StringVar()
         for possible_answer in self.possible_answers:
-            possible_answer = self.check_if_text_too_long(possible_answer,
-                                                          number_of_characters_per_row - diff_for_answers)
+
             R = ttk.Radiobutton(self,
                                 compound="right",
-                                text=_(possible_answer),
+                                text=possible_answer,
                                 variable=self.var,
-                                value=_(possible_answer),
+                                value=possible_answer,
                                 command=self.set_chosen_answer)
             # Ko uporabnik izbere odgovor, se mu prikaze gumb za potrditev, ko stisne nanj se preveri pravilnost izbire
             self.radio_buttons[possible_answer] = R
@@ -260,9 +273,9 @@ class Question(ttk.Frame):
             currentLine = lines[self.number]
             # zapisano v obliki Vprasanje;odg1:odg2:odg3;odgovorPravilen
             data = currentLine.split(";")
-            self.question = data[0]
-            self.correct_answer = data[2]
-            self.possible_answers = [answer for answer in data[1].split(":")]
+            self.question = self.check_if_text_too_long(data[0])
+            self.correct_answer = self.check_if_text_too_long(data[2], diff_for_answers)
+            self.possible_answers = [self.check_if_text_too_long(answer, diff_for_answers) for answer in data[1].split(":")]
 
 
 class ResultPage(ttk.Frame):
@@ -312,5 +325,5 @@ app.geometry("500x250")
 color = '#%02x%02x%02x' % (231, 231, 231)
 app.configure(bg=color)  # sicer bi bil rob beli
 
-app.resizable(0, 0)  # v nobeno smer ni resizable
+app.resizable(0, 0)  # da v nobeno smer ni resizable
 app.mainloop()
