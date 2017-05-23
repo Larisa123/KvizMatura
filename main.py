@@ -1,13 +1,22 @@
 from tkinter import *
 from tkinter import ttk
 import random
+import gettext
+#import pymsgbox
+import easygui
+
+color = '#%02x%02x%02x' % (231, 231, 231)
+
+en = gettext.translation('main', localedir='locale', languages=['en'])
+en.install()
+
+
 
 button_width = 17
 number_of_characters_per_row = 56
 diff_for_answers = number_of_characters_per_row - 13 # da je prostor še za slikico prav/narobe
 
 import subprocess  # poskusile 5 razlicnih modulov: pyglet, mp3play, sound in se dva pa noben ni delal
-
 
 # pygame se nama zdi prevelika knjiznica za dodati za samo nekaj zvokov
 def play_button_click():  # dela samo na OS X!
@@ -17,30 +26,23 @@ def play_button_click():  # dela samo na OS X!
 # lahko bi dodali glasbo v ozadju:
 # subprocess.call(["afplay", "music.mp3"]) # vendar ce to igram, potem nic drugo ne dela dokler se glasba ne konca!
 
-import gettext
-
-en = gettext.translation('main', localedir='locale', languages=['en'])
-en.install()
-
-
 
 class Quiz(Tk):
     frames = {} # vsi frami z vprasanji
     number_of_questions = 5
-    question_count = 0
+    question_count = -1 # prvo vprašanje je pri 1
     number_of_all_questions = 20  # per subject in SUBJECTdata.txt
     points = 0  # number of points user gets for answering the question correctly
-    translation_language = "SL" # privzet jezik
+    translation_language = "EN" # privzet jezik - ce ne izbere nicesar
 
     def __init__(self, *args, **kwargs):
         Tk.__init__(self, *args, **kwargs)
         Tk.wm_title(self, _("Maturitetni kviz"))
 
         self.initialize_container_frame()
-        self.initialize_start_page()
+        self.initialize_config_page()
 
         self.set_images()
-        self.create_translation_button()
 
     def initialize_container_frame(self):
         self.container = ttk.Frame(self)  # to je frame, ki nima na sebi nič, na njega zlagama nove
@@ -51,11 +53,28 @@ class Quiz(Tk):
         # default weight je 0, kar pomeni da bo ta imel najvecji prostor ko spremenimo velikost - zaenkrat nima veze ker je sam
         self.container.grid_columnconfigure(0, weight=1)
 
+    def initialize_config_page(self):
+        config_page = ConfigPage(self.container, self)
+        config_page.grid(row=0, column=0, sticky="nsew")
+        self.frames[-1] = config_page
+        self.show_frame()
+
     def initialize_start_page(self):
         start_page = StartPage(self.container, self)
         start_page.grid(row=0, column=0, sticky="nsew")
         self.frames[0] = start_page
         self.show_frame()
+
+    def translate(self):
+        if self.translation_language == "SL":
+            global _
+            _ = lambda s: s
+
+            #pymsgbox.alert('This is an alert!', 'Message')
+            #response = pymsgbox.prompt('What is your name?')
+        else:
+            text = "Not all questions are available in English.\nThose not currently available will appear in Slovene."
+            easygui.msgbox(text, title="Notification")
 
     def show_frame(self):
         if self.question_count <= self.number_of_questions:
@@ -120,15 +139,53 @@ class Quiz(Tk):
         self.wrong_photo = PhotoImage(file="Images/wrong.gif")
         Label(self, image=self.wrong_photo)
 
-    def create_translation_button(self):
-        self.translation_button = ttk.Button(self, text="EN",
-                                            command=self.change_translation_language,
-                                            width=button_width)
 
-    def change_translation_language(self):
-        self.translation_language = "SL" if self.translation_language == "EN" else "EN"
+class ConfigPage(ttk.Frame):
+    def __init__(self, parent, quiz_reference):  # self je container - vse se bo nalagalo na container
+        ttk.Frame.__init__(self, parent)
+        self.quiz_reference = quiz_reference
 
-        # Update button text:
+        self.show_frame()
+
+    def show_frame(self):
+        language_frame = ttk.Frame(self)
+        text = '''Choose the language:'''
+        ttk.Label(language_frame, text=text, justify="center").pack(padx=10, pady=10)
+
+        self.language_var = StringVar()
+        ttk.Radiobutton(language_frame,
+                        variable=self.language_var,
+                        text="English",
+                        value="EN",
+                        command=lambda: self.set_language("EN"),
+                        width=button_width//2).pack(side="left")
+        ttk.Radiobutton(language_frame,
+                        variable=self.language_var,
+                        text="Slovene",
+                        value="SL",
+                        command=lambda: self.set_language("SL"),
+                        width=button_width // 2).pack(side="right")
+
+        language_frame.pack(pady=15)
+
+        choose_number_frame = ttk.Frame(self)
+        ttk.Label(choose_number_frame, text="Choose the number of questions:").pack(pady=20, padx=10, side="left")
+        self.spinbox = Spinbox(choose_number_frame, from_=3, to=10, width=5, readonlybackground=color, state="readonly")
+        self.spinbox.pack(side="right", pady=10)
+        choose_number_frame.pack(pady=15)
+
+        ttk.Button(self, text="Start the quiz!",
+                   command=self.show_start_page,
+                   width=button_width).pack(side="bottom")
+
+    def set_language(self, language):
+        self.quiz_reference.translation_language = language
+
+    def show_start_page(self):
+        play_button_click()
+        self.quiz_reference.translate()
+        self.quiz_reference.number_of_questions = int(self.spinbox.get())
+        self.quiz_reference.initialize_start_page()
 
 
 class StartPage(ttk.Frame):  # podeduje metode in lastnosti razreda
@@ -139,8 +196,6 @@ class StartPage(ttk.Frame):  # podeduje metode in lastnosti razreda
         self.show_frame()
 
     def show_frame(self):
-        translation_button = self.quiz_reference.translation_lanquage
-
         text = _('''Pozdravljen bodoči maturant!\nPred tabo je kratek kviz iz maturitetnih predmetov\n''')
         ttk.Label(self, text=text, justify="center").pack(padx=10)
 
@@ -165,10 +220,6 @@ class StartPage(ttk.Frame):  # podeduje metode in lastnosti razreda
         self.start_page_image = photo  # treba je imeti se eno povezavo, zato da je avtomatsko ne izbrise
         label.pack()
 
-
-#class HowManyQuestionsPage(ttk.Frame):  # vprasa uporabnika na koliko vprašanj želi odgovoriti
-#    def __init__(self, parent, quiz_reference):  # self je container - vse se bo nalagalo na container
-#        ttk.Frame.__init__(self, parent)
 
 
 class Question(ttk.Frame):
@@ -321,8 +372,7 @@ class ResultPage(ttk.Frame):
 
 app = Quiz()
 
-app.geometry("500x250")
-color = '#%02x%02x%02x' % (231, 231, 231)
+app.geometry("500x265")
 app.configure(bg=color)  # sicer bi bil rob beli
 
 app.resizable(0, 0)  # da v nobeno smer ni resizable
