@@ -4,7 +4,7 @@ import random
 
 button_width = 17
 number_of_characters_per_row = 56
-diff_for_answers = 12
+diff_for_answers = 15
 
 import subprocess  # poskusile 5 razlicnih modulov: pyglet, mp3play, sound in se dva pa noben ni delal
 
@@ -19,11 +19,8 @@ def play_button_click():  # dela samo na OS X!
 
 import gettext
 
-try:
-    en = gettext.translation('main', localedir='locale', languages=['en'])
-    en.install()
-except:
-    print(_("Prevedba v angleski jezik ni bila mogoca."))
+en = gettext.translation('main', localedir='locale', languages=['en'])
+en.install()
 
 
 
@@ -184,7 +181,7 @@ class Question(ttk.Frame):
         '''prikaze vprasanje na label widgetu'''
         edited_text = self.check_if_text_too_long(self.question, number_of_characters_per_row)
 
-        ttk.Label(self, text=edited_text).pack(pady=15, padx=10, side="top")
+        ttk.Label(self, text=_(edited_text)).pack(pady=15, padx=10, side="top")
 
     def check_if_text_too_long(self, unedited_text, allowed_number_of_chars):
         '''vrne primerno preurejen text z novimi vrsticami, ce je trenutno predolg'''

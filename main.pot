@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: main\n"
-"POT-Creation-Date: 2017-05-22 18:40+0200\n"
+"POT-Creation-Date: 2017-05-23 11:08+0200\n"
 "PO-Revision-Date: 2017-05-16 15:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,6 +16,655 @@ msgstr ""
 "X-Poedit-KeywordsList: _;_(\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: TextFiles\n"
+"X-Poedit-SearchPath-2: TextFiles/GEOdata_transl.py\n"
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kateri pojmi predstavljajo podnebne dejavnike?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "relief, geografska širina, morski tokovi"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "veter, geografska širina, morski tokovi"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "relief, geografska širina, temperatura"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Velike afriške reke se na poti proti morju s slapovi in brzicami prebijejo čez pragove na robu celine. Kateri dve našteti gospodarski posledici sta pozitivnega značaja?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "razvoj kovinske industrije, ustanovitev podjetij, ki stekleničijo pitno vodo"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "razvoj kovaštva, turizma"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "hidroenergetski potencial, turizem"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera je oblika podzemne vode, ki je najpomembnejša za kmetijstvo suhih in polsuhih območij Avstralije?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "aboriginska voda"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "arteška ali ujeta talna voda"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "avstralska voda"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera sta dva možna vzroka za visoko stopnjo urbanizacije megalopolisa?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "lega v notranjosti celine, visoka stopnja izobrazbe prvotnih priseljencev"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "lega v notranjosti celine, dobre kmetijske možnosti"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "lega ob Atlantiku, hiter razvoj industrije"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera izmed naštetih značilnosti velja za Latinsko Ameriko?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "na obrobju živijo potomci nekdanjih sužnjev"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "na obrobju živijo otroci revnejših slojev"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "na obrobju živijo revnejši sloji"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kakšen je eden izmed vplivov geografske širine na redko poselitev Avstralije?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "zaradi lege ob ekvatorju prevladujejo puščave"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "zaradi lege ob povratniku prevladujejo monsuni"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "zaradi lege ob povratniku prevladujejo puščave"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kateri kamnini prevladujeta v Skandinavskem gorovju?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "apnenec, granit"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "granit, peščenjak"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "granit, gnajs"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "V katerem geološkem obdobju so nastali Ardeni?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "starejši paleozoik"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "mlajši paleozoik"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "kenozoik"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Na območju katerih dveh podenebnih tipov v naravnem okolju živijo severni jeleni?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "tundrsko, polarno"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "tundrsko, zmerno hladno"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "zmerno hladno, kontinentalno polsuho"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera dva našteta družbena dejavnika vplivata na visok hektarski donos na Nizozemskem in Danskem?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "visoka stopnja mehanizacije, donosnejše sorte rastlin"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "krščanska vera, kultura"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "kultura, donosnejše sorte rastlin"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kateri fosilni energijski vir najbolj onesnažuje ozračje?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "premog"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "uran"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "nafta"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Za katero prst v Sloveniji je značilno, da nastane na silikatni podlagi?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "za distrične rjave prsti"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "za evtrične rjave prsti"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "za obe vrsti prsti"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera naravna nesreča v Sloveniji ima največji vpliv na ekološko funkcijo gozda?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "poplave"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "suše"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "požari"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kateri je sektor dejavnosti, v katerega spadata promet in turizem?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "terciarni"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "primarni"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "sekundarni"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Čez kateri prelaz se po avtocesti peljete od Ljubljane do Kopra?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Vršič"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Postojnska vrata"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Črnivec"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kako se v Sloveniji imenuje krak avtocestnega križa, ki poteka od JZ proti SV?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Slovenika"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Ilirika"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Slovenka"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kateri sta dve izmed prednosti slovenske turistične ponudbe v primerjavi s hrvaško turistično ponudbo?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "morje, smučišča"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "smučišča, reke"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "smučišča, kraški turizem"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Za katero pokrajino v Sloveniji veljajo naslednji opisi: alpska smer slemenitve, nižji in dolomitni vzhodni del, vinogradništvo ob vznožju hribovja?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Gorjanci"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Krimsko višavje"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Nanos"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera reka v Sloveniji teče skozi Ravne na Koroškem?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Drava"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Meža"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Kotulja"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "Katera industrijska panoga je bila po 2. svetovni vojni najpomembnejša v Ravnah na Koroškem?"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "železarstvo"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "steklarstvo"
+msgstr ""
+
+#: TextFiles/GEOdata_transl.py:1
+msgid "kovinska industrija"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je univerzalna množica?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je množica, ki je enolično določena in vsebuje vedno iste elemente"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je množica vseh elementov, na katero se v danem primeru omejimo"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je množica, na katero se omejimo, ko računamo primere iz vsakdanjosti"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kakšna je geometrijska definicija elipse?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je krožnica, ki ima obliko jajca"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je množica točk ravnine, ki so horizontalno bolj oddaljene od izhodišča kot vertikalno"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je množica točk ravnine, katerih vsota razdalj od izbranih dveh točk je stalna"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je nedoločeni integral funkcije f?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vsaka funkcija F, ki ni natanko določena, ko jo integriramo"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vsaka funkcija F, katere odvod je funkcija f"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vsaka funkcija F, katere integral je funkcija f"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Katera realna števila so iracionalna?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "so števila, ki imajo neskončen decimalni zapis, ki ni periodičen"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "so števila, ki imajo neskončen decimalni zapis, ki je periodičen"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "so števila, ki imajo končen decimalni zapis, ki ni periodičen"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je odvod funkcije f v dani točki?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je limita diferenčnega količnika te funkcije, ko gre sprememba neodvisne spremenljivke proti nič, če ta limita obstaja"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je limita diferenčnega količnika te funkcije, ko gre sprememba neodvisne spremenljivke proti neskončno, če ta limita obstaja"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je limita diferenčnega količnika te funkcije, ko gre sprememba odvisne spremenljivke proti nič, če ta limita obstaja"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kdaj sta trikotnika skladna?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "če ju lahko narišemo enega na drugega"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "če obstaja togi premik, ki en trikotnik preslika v zrcalno sliko drugega"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "če obstaja togi premik, ki en trikotnik preslika na drugega"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "če obstaja togi premik, ki en trikotnih preslika na drugega"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je krajevni vektor točke A?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vektor od točke A do točke B"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vektor od izhodišča koordinatnega sistema do točke A"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vektor od izhodišča koordinatnega sistema do konca vektorja dolžine 1, ki ima prijemališče v točki A"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kakšna je definicija funkcije cos(x) za poljuben x?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je ordinata točke, v kateri drugi krak kota seka en enotsko krožnico"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je abscisa točke, v kateri drugi krak kota seka en enotsko krožnico"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je koordinata točke, v kateri drugi krak kota seka en enotsko krožnico"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Koliko diagonal ima konveksni n-kotnik?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "n(n-2)/3"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "n(n-3)/2"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "n(n-1)/2"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kako upodobimo kompleksna števila v kompleksni ravnini?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "kot točke ali kot krajevne vektorje v Einsteinovi ravnini"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "kot točke ali kot krajevne vektorje v Newtonovi ravnini"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "kot točke ali kot krajevne vektorje v Gaussovi ravnini"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je stacionarna točka?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je točka, v kateri prvi odvod funkcije zavzema konstantno vrednost"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je točka, v kateri prvi odvod funkcije zavzema vrednost 0"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je točka, ki se ne premika"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je praštevilo?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je naravno število, ki ima točno enega delitelja, samega sebe"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je naravno število, ki ima točno dva delitelja, samega sebe in število 1"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je kompleksno število, ki ima točno dva delitelja, samega sebe in število 1"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kdaj uporabljamo sinusni izrek?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "za računanje diagonal v trikotniku"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "za računanje stranic in kotov v trikotniku"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "samo za računanje kotov v trikotniku"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kakšen je geometrijski pomen odvoda?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "predstavlja smerni koeficient sekante na krivuljo v določeni točki"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "predstavlja začetno vrednost tangente na krivuljo v določeni točki"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "predstavlja smerni koeficient tangente na krivuljo v določeni točki"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je kombinatorično drevo?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je shematski prikaz poteka izbir oz. odločanja v različnih fazah"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je shematski prikaz razvoja kombinatorike skozi zgodovino"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je shematski prikaz računanja binomskih koeficientov"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je najmanjši skupni večkratnik dveh celih števil?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je najmanjše število, ki je večkratnik enega izmed obeh števil"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je najmanjše število, ki je večkratnik obeh števil hkrati"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je najmanjše število, ki je večkratnik enega izmed števil in števila 7"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je najmanjše število, ki je večkratnih obeh števil hkrati"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kakšen je razlog za vpeljavo kompleksnih števil?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "da lahko rešimo kvadratne enačbe z negativno diskriminanto in da lahko računamo sode korene negativnih števil"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "da si zakompliciramo računanje"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "da lahko rešimo enačbe pete stopnje in računamo sode korene negativnih števil"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Koliko je 2/0?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "0"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "ni definirano"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "2"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kaj je nasprotni dogodek?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je dogodek, ki se zgodi,če se dani dogodek tudi zgodi"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je dogodek, ki se zgodi,če se dani dogodek ne zgodi"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je dogodek, ki se zgodi in se hkrati ne zgodi"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "Kakšna je definicija skalarnega produkta dveh vektorjev a in b?"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je realno število, ki je enako produktu dolžine vektorja a in pravokotne projekcije vektorja b na smer vektorja a"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je vektor, ki je enak produktu dolžine vektorja a in pravokotne projekcije vektorja b na smer vektorja a"
+msgstr ""
+
+#: TextFiles/MATdata_transl.py:1
+msgid "je realno število, ki je enako produktu dolžin vektorjev a in b"
+msgstr ""
 
 #: main.py:26
 msgid "Prevedba v angleski jezik ni bila mogoca."
